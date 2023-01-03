@@ -10,7 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
   functional_widget_annotation: ^0.10.0
-  cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.6
 
@@ -34,7 +33,11 @@ flutter:
     - images/typescript.svg
     - images/java.svg
     - images/google_play_badge.png
+    - images/app_store_badge.svg
     - images/jetpack_compose.png
+    - images/riverpod.svg
+    - images/algolia.svg
+    - images/realm.svg
 
 flutter_gen:
   integrations:

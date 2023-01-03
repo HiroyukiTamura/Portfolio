@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/style/theme_colors.dart';
+import 'package:portfolio/resource/theme_colors.dart';
 import 'package:portfolio/ui/content.dart';
 
 void main() {

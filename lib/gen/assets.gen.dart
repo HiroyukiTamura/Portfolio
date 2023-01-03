@@ -17,6 +17,13 @@ class $ImagesGen {
   /// File path: images/admob.svg
   SvgGenImage get admob => const SvgGenImage('images/admob.svg');
 
+  /// File path: images/algolia.svg
+  SvgGenImage get algolia => const SvgGenImage('images/algolia.svg');
+
+  /// File path: images/app_store_badge.svg
+  SvgGenImage get appStoreBadge =>
+      const SvgGenImage('images/app_store_badge.svg');
+
   /// File path: images/dart.svg
   SvgGenImage get dart => const SvgGenImage('images/dart.svg');
 
@@ -43,12 +50,20 @@ class $ImagesGen {
   /// File path: images/kotlin.svg
   SvgGenImage get kotlin => const SvgGenImage('images/kotlin.svg');
 
+  /// File path: images/realm.svg
+  SvgGenImage get realm => const SvgGenImage('images/realm.svg');
+
+  /// File path: images/riverpod.svg
+  SvgGenImage get riverpod => const SvgGenImage('images/riverpod.svg');
+
   /// File path: images/typescript.svg
   SvgGenImage get typescript => const SvgGenImage('images/typescript.svg');
 
   /// List of all assets
   List<dynamic> get values => [
         admob,
+        algolia,
+        appStoreBadge,
         dart,
         firebase,
         flutter,
@@ -57,6 +72,8 @@ class $ImagesGen {
         jetpackCompose,
         jira,
         kotlin,
+        realm,
+        riverpod,
         typescript
       ];
 }

@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'content.dart';
+part of 'section_radio.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class Root extends StatelessWidget {
-  const Root({Key? key}) : super(key: key);
+class SectionRadio extends StatelessWidget {
+  const SectionRadio({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext _context) => _root(_context);
+  Widget build(BuildContext _context) => sectionRadio(_context);
 }
