@@ -10,5 +10,5 @@ class SectionRadio extends StatelessWidget {
   const SectionRadio({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext _context) => sectionRadio(_context);
+  Widget build(BuildContext _context) => _sectionRadio(_context);
 }

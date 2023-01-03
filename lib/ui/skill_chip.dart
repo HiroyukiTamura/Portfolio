@@ -56,6 +56,15 @@ Widget _skillChipTypeScript() => SkillChip(
   );
 
 @swidget
+Widget _skillChipNodeJs() => SkillChip(
+  label: 'Node.js',
+  avatar: Padding(
+    padding: const EdgeInsets.all(2),
+    child: Assets.images.nodeJs.svg(),
+  ),
+);
+
+@swidget
 Widget _skillChipFirebase() => SkillChip(
   label: 'Firebase',
   avatar: Padding(

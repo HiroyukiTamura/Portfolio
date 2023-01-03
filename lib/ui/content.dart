@@ -4,12 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/resource/theme_colors.dart';
+import 'package:portfolio/ui/section_download.dart';
 import 'package:portfolio/ui/section_radio.dart';
 import 'package:portfolio/ui/section_skill_set.dart';
 import 'package:portfolio/ui/section_top.dart';
 import 'package:portfolio/ui/section_train.dart';
-
-import 'skill_chip.dart';
 
 part 'content.g.dart';
 
@@ -21,28 +20,18 @@ Widget _root(BuildContext context) => Scaffold(
         child: Column(
           children: [
             const SectionTop(),
-            const SizedBox(height: 64),
+            const SizedBox(height: 16),
+            const SectionDownloaded(),
+            const SizedBox(height: 128),
             const SectionSkillSet(),
-            const SizedBox(height: 64),
+            const SizedBox(height: 128),
             Text(
-              'my apps',
+              'works',
               style: Theme.of(context).textTheme.headline4,
             ),
             const SizedBox(height: 64),
-            Text(
-              'ラジカッター',
-              style: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme)
-                  .headline3,
-            ),
-            const SizedBox(height: 16),
             const SectionRadio(),
-            const SizedBox(height: 64),
-            Text(
-              '全国列車位置情報アプリ',
-              style: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme)
-                  .headline3,
-            ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 128),
             const SectionTrain(),
           ],
         ),

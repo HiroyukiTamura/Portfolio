@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   functional_widget_annotation: ^0.10.0
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.6
@@ -38,6 +40,10 @@ flutter:
     - images/riverpod.svg
     - images/algolia.svg
     - images/realm.svg
+    - images/figma.svg
+    - images/node_js.svg
+    - images/radiko_cover.png
+    - images/train_cover.png
 
 flutter_gen:
   integrations:

@@ -67,6 +67,13 @@ class SkillChipTypeScript extends StatelessWidget {
   Widget build(BuildContext _context) => _skillChipTypeScript();
 }
 
+class SkillChipNodeJs extends StatelessWidget {
+  const SkillChipNodeJs({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipNodeJs();
+}
+
 class SkillChipFirebase extends StatelessWidget {
   const SkillChipFirebase({Key? key}) : super(key: key);
 

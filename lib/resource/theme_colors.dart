@@ -7,13 +7,15 @@ class ThemeColors {
   static const kAndroid = Color(0xff3DDC84);
 
   static TextTheme genTextTheme(ThemeData theme) {
-    final textTheme = theme.textTheme.copyWith(
-      bodyLarge: theme.textTheme.bodyLarge!.copyWith(fontSize: 16),
-    );
-    return GoogleFonts.jetBrainsMonoTextTheme(textTheme)
-        .apply(
+    final googleFont = GoogleFonts.jetBrainsMonoTextTheme(theme.textTheme).apply(
       displayColor: Colors.white,
       bodyColor: Colors.white,
+    );
+    return googleFont.copyWith(
+      bodyLarge: theme.textTheme.bodyLarge!.copyWith(
+        fontSize: 16,
+        color: Colors.white70,
+      ),
     );
   }
 }

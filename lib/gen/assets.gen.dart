@@ -27,6 +27,9 @@ class $ImagesGen {
   /// File path: images/dart.svg
   SvgGenImage get dart => const SvgGenImage('images/dart.svg');
 
+  /// File path: images/figma.svg
+  SvgGenImage get figma => const SvgGenImage('images/figma.svg');
+
   /// File path: images/firebase.svg
   SvgGenImage get firebase => const SvgGenImage('images/firebase.svg');
 
@@ -50,11 +53,21 @@ class $ImagesGen {
   /// File path: images/kotlin.svg
   SvgGenImage get kotlin => const SvgGenImage('images/kotlin.svg');
 
+  /// File path: images/node_js.svg
+  SvgGenImage get nodeJs => const SvgGenImage('images/node_js.svg');
+
+  /// File path: images/radiko_cover.png
+  AssetGenImage get radikoCover =>
+      const AssetGenImage('images/radiko_cover.png');
+
   /// File path: images/realm.svg
   SvgGenImage get realm => const SvgGenImage('images/realm.svg');
 
   /// File path: images/riverpod.svg
   SvgGenImage get riverpod => const SvgGenImage('images/riverpod.svg');
+
+  /// File path: images/train_cover.png
+  AssetGenImage get trainCover => const AssetGenImage('images/train_cover.png');
 
   /// File path: images/typescript.svg
   SvgGenImage get typescript => const SvgGenImage('images/typescript.svg');
@@ -65,6 +78,7 @@ class $ImagesGen {
         algolia,
         appStoreBadge,
         dart,
+        figma,
         firebase,
         flutter,
         googlePlayBadge,
@@ -72,8 +86,11 @@ class $ImagesGen {
         jetpackCompose,
         jira,
         kotlin,
+        nodeJs,
+        radikoCover,
         realm,
         riverpod,
+        trainCover,
         typescript
       ];
 }
