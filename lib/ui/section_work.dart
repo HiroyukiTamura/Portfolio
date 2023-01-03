@@ -21,9 +21,7 @@ Widget sectionWork(
       children: [
         Text(
           title,
-          style:
-              GoogleFonts.notoSansJavaneseTextTheme(Theme.of(context).textTheme)
-                  .headline3,
+          style: Theme.of(context).textTheme.headline3,
         ),
         const SizedBox(height: 64),
         Row(

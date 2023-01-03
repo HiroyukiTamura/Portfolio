@@ -14,6 +14,7 @@ dependencies:
   functional_widget_annotation: ^0.10.0
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.6
+  freezed_annotation: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +22,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   functional_widget: ^0.10.1
   build_runner: ^2.3.3
+  freezed: ^2.3.2
   flutter_gen_runner:
 
 flutter:
@@ -44,6 +46,7 @@ flutter:
     - images/node_js.svg
     - images/radiko_cover.png
     - images/train_cover.png
+    - images/itsumuso_cover.webp
 
 flutter_gen:
   integrations:

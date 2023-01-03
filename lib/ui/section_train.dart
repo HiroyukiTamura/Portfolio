@@ -13,6 +13,9 @@ Widget _sectionTrain(BuildContext context) => SectionWork(
       caption: Strings.trainCaption,
       totalDlNumber: '500k',
       monthlyUserNumber: '5k',
+      googlePlayUrl:
+          'https://play.google.com/store/apps/details?id=cks.train.train',
+      appStoreUrl: 'https://apps.apple.com/au/app/%E5%85%A8%E5%9B%BD%E5%88%97%E8%BB%8A%E4%BD%8D%E7%BD%AE%E3%82%A2%E3%83%97%E3%83%AA/id1479323990',
       techChips: [
         const SkillChipFlutter(),
         SkillChip(

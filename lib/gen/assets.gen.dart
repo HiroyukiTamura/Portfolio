@@ -40,6 +40,10 @@ class $ImagesGen {
   AssetGenImage get googlePlayBadge =>
       const AssetGenImage('images/google_play_badge.png');
 
+  /// File path: images/itsumuso_cover.webp
+  AssetGenImage get itsumusoCover =>
+      const AssetGenImage('images/itsumuso_cover.webp');
+
   /// File path: images/java.svg
   SvgGenImage get java => const SvgGenImage('images/java.svg');
 
@@ -82,6 +86,7 @@ class $ImagesGen {
         firebase,
         flutter,
         googlePlayBadge,
+        itsumusoCover,
         java,
         jetpackCompose,
         jira,
