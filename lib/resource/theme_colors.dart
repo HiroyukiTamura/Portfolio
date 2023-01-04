@@ -6,7 +6,7 @@ class ThemeColors {
   ThemeColors._();
 
   static const kBg = Color(0xff151515);
-  static final kBgGray = Colors.grey.shade700;
+  static final kBgGray = Colors.white.withAlpha(10);
   static const kAndroid = Color(0xff3DDC84);
 
   static TextTheme genTextTheme(ThemeData theme) {

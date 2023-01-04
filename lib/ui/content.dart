@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
+import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/resource/theme_colors.dart';
+import 'package:portfolio/ui/sectionArticle.dart';
 import 'package:portfolio/ui/section_download.dart';
 import 'package:portfolio/ui/section_flutter_hls_parser.dart';
 import 'package:portfolio/ui/section_itsumuso.dart';
@@ -28,7 +30,7 @@ Widget _root(BuildContext context) => Scaffold(
               'works',
               style: Theme.of(context).textTheme.headline4,
             ),
-            const SizedBox(height: 64),
+            const SizedBox(height: 16),
             const SectionRadio(),
             const SizedBox(height: 128),
             const SectionTrain(),
@@ -40,17 +42,23 @@ Widget _root(BuildContext context) => Scaffold(
               style: Theme.of(context).textTheme.headline4,
             ),
             const SizedBox(height: 48),
-            Row(
-              children: const [
-                Expanded(
-                  child: BlockFlutterHlsParser(),
-                ),
-                SizedBox(width: 64),
-                Expanded(
-                  child: BlockDoubleTapPlayerView(),
-                ),
-              ],
+            ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: Dimens.MaxWidthWorks,
+              ),
+              child: Row(
+                children: const [
+                  Expanded(
+                    child: BlockFlutterHlsParser(),
+                  ),
+                  SizedBox(width: 64),
+                  Expanded(
+                    child: BlockDoubleTapPlayerView(),
+                  ),
+                ],
+              ),
             ),
+            const SectionArticle(),
           ],
         ),
       ),

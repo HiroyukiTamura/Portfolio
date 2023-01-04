@@ -36,7 +36,7 @@ class SectionWork extends StatelessWidget {
   final String? appStoreUrl;
 
   @override
-  Widget build(BuildContext _context) => sectionWork(
+  Widget build(BuildContext _context) => _sectionWork(
         _context,
         title: title,
         caption: caption,
