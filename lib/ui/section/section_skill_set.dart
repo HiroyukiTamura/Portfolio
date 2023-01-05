@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
-import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/dimens.dart';
-import 'package:portfolio/resource/theme_colors.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 
 part 'section_skill_set.g.dart';
@@ -20,31 +18,21 @@ Widget _sectionSkillSet(BuildContext context) => ConstrainedBox(
           Wrap(
             spacing: 8,
             runSpacing: 8,
-            children: [
-              const SkillChipIcon(
-                label: 'Android',
-                icon: Icons.android,
-                iconColor: ThemeColors.kAndroid,
-              ),
-              const SkillChipKotlin(),
-              const SkillChipFlutter(),
-              const SkillChipDart(),
-              const SkillChipNodeJs(),
-              const SkillChipTypeScript(),
-              SkillChip(
-                label: 'Java',
-                avatar: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 2),
-                  child: Assets.images.java.svg(),
-                ),
-              ),
-              const SkillChipFirebase(),
-              const SkillChipJira(),
-              const SkillChipAdmob(),
-              const SkillChipLang(
+            children: const [
+              SkillChipAndroid(),
+              SkillChipKotlin(),
+              SkillChipFlutter(),
+              SkillChipDart(),
+              SkillChipNodeJs(),
+              SkillChipTypeScript(),
+              SkillChipJava(),
+              SkillChipFirebase(),
+              SkillChipJira(),
+              SkillChipAdmob(),
+              SkillChipLang(
                 label: 'native level Japanese',
               ),
-              const SkillChipLang(
+              SkillChipLang(
                 label: 'B1 level English',
               ),
             ],

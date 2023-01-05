@@ -6,8 +6,8 @@ part of 'skill_chip.dart';
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class SkillChipIcon extends StatelessWidget {
-  const SkillChipIcon({
+class _SkillChipIcon extends StatelessWidget {
+  const _SkillChipIcon({
     Key? key,
     required this.label,
     required this.icon,
@@ -21,15 +21,15 @@ class SkillChipIcon extends StatelessWidget {
   final Color iconColor;
 
   @override
-  Widget build(BuildContext _context) => _skillChipIcon(
+  Widget build(BuildContext _context) => __skillChipIcon(
         label: label,
         icon: icon,
         iconColor: iconColor,
       );
 }
 
-class SkillChip extends StatelessWidget {
-  const SkillChip({
+class _SkillChip extends StatelessWidget {
+  const _SkillChip({
     Key? key,
     required this.label,
     required this.avatar,
@@ -40,7 +40,7 @@ class SkillChip extends StatelessWidget {
   final Widget avatar;
 
   @override
-  Widget build(BuildContext _context) => _skillChip(
+  Widget build(BuildContext _context) => __skillChip(
         label: label,
         avatar: avatar,
       );
@@ -112,4 +112,53 @@ class SkillChipLang extends StatelessWidget {
 
   @override
   Widget build(BuildContext _context) => _skillChipLang(label: label);
+}
+
+class SkillChipAndroid extends StatelessWidget {
+  const SkillChipAndroid({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipAndroid();
+}
+
+class SkillChipJava extends StatelessWidget {
+  const SkillChipJava({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipJava();
+}
+
+class SkillChipCompose extends StatelessWidget {
+  const SkillChipCompose({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipCompose();
+}
+
+class SkillChipRealm extends StatelessWidget {
+  const SkillChipRealm({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipRealm();
+}
+
+class SkillChipRiverpod extends StatelessWidget {
+  const SkillChipRiverpod({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipRiverpod();
+}
+
+class SkillChipAlgolia extends StatelessWidget {
+  const SkillChipAlgolia({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipAlgolia();
+}
+
+class SkillChipFigma extends StatelessWidget {
+  const SkillChipFigma({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => _skillChipFigma();
 }

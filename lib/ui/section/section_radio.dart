@@ -20,24 +20,15 @@ Widget _sectionRadio(
       monthlyUserNumber: '11k',
       googlePlayUrl:
           'https://play.google.com/store/apps/details?id=com.cks.hiroyuki2.radiko',
-      techChips: [
-        const SkillChipKotlin(),
-        SkillChip(
-          label: 'Jetpack Compose',
-          avatar: Assets.images.jetpackCompose.image(),
-        ),
-        SkillChip(
-          label: 'Realm',
-          avatar: Padding(
-            padding: const EdgeInsets.all(2),
-            child: Assets.images.realm.svg(),
-          ),
-        ),
-        const SkillChipFirebase(),
-        const SkillChipNodeJs(),
-        const SkillChipTypeScript(),
-        const SkillChipJira(),
-        const SkillChipAdmob(),
+      techChips: const [
+        SkillChipKotlin(),
+        SkillChipCompose(),
+        SkillChipRealm(),
+        SkillChipFirebase(),
+        SkillChipNodeJs(),
+        SkillChipTypeScript(),
+        SkillChipJira(),
+        SkillChipAdmob(),
       ],
       image: Container(
         child: Assets.images.radikoCover.image(),

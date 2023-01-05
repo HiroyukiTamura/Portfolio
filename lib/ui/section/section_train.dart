@@ -22,33 +22,15 @@ Widget _sectionTrain(
           'https://play.google.com/store/apps/details?id=cks.train.train',
       appStoreUrl:
           'https://apps.apple.com/au/app/%E5%85%A8%E5%9B%BD%E5%88%97%E8%BB%8A%E4%BD%8D%E7%BD%AE%E3%82%A2%E3%83%97%E3%83%AA/id1479323990',
-      techChips: [
-        const SkillChipFlutter(),
-        SkillChip(
-          label: 'riverpod',
-          avatar: Padding(
-            padding: const EdgeInsets.all(2),
-            child: Assets.images.riverpod.svg(),
-          ),
-        ),
-        SkillChip(
-          label: 'algolia',
-          avatar: Padding(
-            padding: const EdgeInsets.all(2),
-            child: Assets.images.algolia.svg(),
-          ),
-        ),
-        const SkillChipFirebase(),
-        const SkillChipNodeJs(),
-        const SkillChipTypeScript(),
-        const SkillChipJira(),
-        SkillChip(
-          label: 'figma',
-          avatar: Padding(
-            padding: const EdgeInsets.all(2),
-            child: Assets.images.figma.svg(),
-          ),
-        )
+      techChips: const [
+        SkillChipFlutter(),
+        SkillChipRiverpod(),
+        SkillChipAlgolia(),
+        SkillChipFirebase(),
+        SkillChipNodeJs(),
+        SkillChipTypeScript(),
+        SkillChipJira(),
+        SkillChipFigma(),
       ],
       image: Assets.images.trainCover.image(fit: BoxFit.fill),
     );
