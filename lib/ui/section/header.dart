@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/util.dart';
@@ -19,11 +18,13 @@ Widget _sectionHeader(BuildContext context) => ConstrainedBox(
               onPressed: () async =>
                   Util.launch('https://www.facebook.com/freqmodu874/'),
             ),
-            _IconBtn(
-              icon: FontAwesomeIcons.github,
-              iconSize: 20,
-              onPressed: () async =>
-                  Util.launch('https://github.com/HiroyukiTamura/portfolio'),
+            _WidgetBtn(
+              onPressed: () async => Util.launch('https://github.com/HiroyukiTamura/portfolio'),
+              child: Assets.images.github.svg(
+                color: Colors.white,
+                height: 20,
+                width: 20,
+              ),
             ),
             _WidgetBtn(
               onPressed: () async => Util.launch(Util.URL_QIITA),
@@ -53,7 +54,7 @@ Widget __iconBtn(
       color: Colors.white,
       splashRadius: 24,
       onPressed: onPressed,
-      icon: Center(child: Icon(icon)),
+      icon: Icon(icon),
     );
 
 @swidget

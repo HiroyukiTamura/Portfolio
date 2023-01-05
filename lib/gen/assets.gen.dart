@@ -36,6 +36,9 @@ class $ImagesGen {
   /// File path: images/flutter.svg
   SvgGenImage get flutter => const SvgGenImage('images/flutter.svg');
 
+  /// File path: images/github.svg
+  SvgGenImage get github => const SvgGenImage('images/github.svg');
+
   /// File path: images/google_play_badge.png
   AssetGenImage get googlePlayBadge =>
       const AssetGenImage('images/google_play_badge.png');
@@ -88,6 +91,7 @@ class $ImagesGen {
         figma,
         firebase,
         flutter,
+        github,
         googlePlayBadge,
         itsumusoCover,
         java,

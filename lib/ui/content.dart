@@ -24,11 +24,7 @@ Widget _root(BuildContext context) =>
       return Scaffold(
         backgroundColor: ThemeColors.kBg,
         body: ListView(
-          padding: const EdgeInsets.only(
-            bottom: 64,
-            right: 64,
-            left: 64,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 64),
           children: [
             const SectionHeader(),
             const SizedBox(height: 16),
