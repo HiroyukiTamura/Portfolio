@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/util.dart';
@@ -19,7 +20,8 @@ Widget _sectionHeader(BuildContext context) => ConstrainedBox(
                   Util.launch('https://www.facebook.com/freqmodu874/'),
             ),
             _WidgetBtn(
-              onPressed: () async => Util.launch('https://github.com/HiroyukiTamura/portfolio'),
+              onPressed: () async =>
+                  Util.launch('https://github.com/HiroyukiTamura/portfolio'),
               child: Assets.images.github.svg(
                 color: Colors.white,
                 height: 20,
@@ -35,8 +37,21 @@ Widget _sectionHeader(BuildContext context) => ConstrainedBox(
               ),
             ),
             const Expanded(child: SizedBox.shrink()),
-            Text('hiroyuktamura@gmail.com',
-                style: Theme.of(context).textTheme.bodyText2),
+            TextButton(
+              onPressed: () async {
+                await Clipboard.setData(const ClipboardData(
+                  text: _kEmail,
+                ));
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text(
+                    'Email address copied to clipboard',
+                    textAlign: TextAlign.center,
+                  ),
+                ));
+              },
+              child: Text('hiroyuktamura@gmail.com',
+                  style: Theme.of(context).textTheme.bodyText2),
+            ),
           ],
         ),
       ),
@@ -70,3 +85,5 @@ Widget __widgetBtn(
       onPressed: onPressed,
       icon: child,
     );
+
+const _kEmail = 'hiroyuktamura@gmail.com';
