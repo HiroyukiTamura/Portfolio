@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/resource/theme_colors.dart';
-import 'package:portfolio/ui/sectionArticle.dart';
-import 'package:portfolio/ui/section_download.dart';
-import 'package:portfolio/ui/section_flutter_hls_parser.dart';
-import 'package:portfolio/ui/section_itsumuso.dart';
-import 'package:portfolio/ui/section_radio.dart';
-import 'package:portfolio/ui/section_skill_set.dart';
-import 'package:portfolio/ui/section_top.dart';
-import 'package:portfolio/ui/section_train.dart';
+import 'package:portfolio/ui/section/section_article.dart';
+import 'package:portfolio/ui/section/section_download.dart';
+import 'package:portfolio/ui/section/section_oss.dart';
+import 'package:portfolio/ui/section/section_itsumuso.dart';
+import 'package:portfolio/ui/section/section_radio.dart';
+import 'package:portfolio/ui/section/section_skill_set.dart';
+import 'package:portfolio/ui/section/section_top.dart';
+import 'package:portfolio/ui/section/section_train.dart';
 
 part 'content.g.dart';
 
@@ -22,7 +22,7 @@ Widget _root(BuildContext context) =>
       return Scaffold(
         backgroundColor: ThemeColors.kBg,
         body: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 64),
+          padding: const EdgeInsets.all(64),
           child: Column(
             children: [
               const SectionTop(),

@@ -3,9 +3,9 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/model/btn_link.dart';
 import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/ui/block_oss.dart';
-import 'package:portfolio/ui/skill_chip.dart';
+import 'package:portfolio/ui/widget/skill_chip.dart';
 
-part 'section_flutter_hls_parser.g.dart';
+part 'section_oss.g.dart';
 
 @swidget
 Widget _blockFlutterHlsParser(BuildContext context) => const BlockFlutterOss(

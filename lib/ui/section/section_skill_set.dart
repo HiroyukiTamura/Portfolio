@@ -3,14 +3,14 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/resource/theme_colors.dart';
-import 'package:portfolio/ui/skill_chip.dart';
+import 'package:portfolio/ui/widget/skill_chip.dart';
 
 part 'section_skill_set.g.dart';
 
 @swidget
 Widget _sectionSkillSet(BuildContext context) => ConstrainedBox(
-  constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthSkill),
-  child:   Column(
+      constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthSkill),
+      child: Column(
         children: [
           Text(
             'skill set',
@@ -41,18 +41,14 @@ Widget _sectionSkillSet(BuildContext context) => ConstrainedBox(
               const SkillChipFirebase(),
               const SkillChipJira(),
               const SkillChipAdmob(),
-              SkillChipIcon(
-                icon: Icons.translate,
-                iconColor: Colors.black,
+              const SkillChipLang(
                 label: 'native level Japanese',
               ),
-              SkillChipIcon(
-                icon: Icons.translate,
-                iconColor: Colors.black,
+              const SkillChipLang(
                 label: 'B1 level English',
-              )
+              ),
             ],
           ),
         ],
       ),
-);
+    );

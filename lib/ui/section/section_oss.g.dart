@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'section_flutter_hls_parser.dart';
+part of 'section_oss.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator

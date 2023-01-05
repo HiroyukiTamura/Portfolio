@@ -101,3 +101,15 @@ class SkillChipDart extends StatelessWidget {
   @override
   Widget build(BuildContext _context) => _skillChipDart();
 }
+
+class SkillChipLang extends StatelessWidget {
+  const SkillChipLang({
+    Key? key,
+    required this.label,
+  }) : super(key: key);
+
+  final String label;
+
+  @override
+  Widget build(BuildContext _context) => _skillChipLang(label: label);
+}

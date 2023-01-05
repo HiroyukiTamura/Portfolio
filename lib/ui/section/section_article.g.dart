@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'sectionArticle.dart';
+part of 'section_article.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
