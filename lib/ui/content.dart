@@ -10,6 +10,7 @@ import 'package:portfolio/ui/section/section_radio.dart';
 import 'package:portfolio/ui/section/section_skill_set.dart';
 import 'package:portfolio/ui/section/section_top.dart';
 import 'package:portfolio/ui/section/section_train.dart';
+import 'package:portfolio/ui/widget/text.dart';
 
 part 'content.g.dart';
 
@@ -31,10 +32,7 @@ Widget _root(BuildContext context) =>
               const SizedBox(height: 128),
               const SectionSkillSet(),
               const SizedBox(height: 128),
-              Text(
-                'works',
-                style: Theme.of(context).textTheme.headline4,
-              ),
+              const HeadLine4(text: 'works'),
               const SizedBox(height: 16),
               SectionRadio(
                 singlePain: singlePain,
@@ -48,36 +46,10 @@ Widget _root(BuildContext context) =>
                 singlePain: singlePain,
               ),
               const SizedBox(height: 128),
-              Text(
-                'OSS',
-                style: Theme.of(context).textTheme.headline4,
-              ),
+              const HeadLine4(text: 'OSS'),
               const SizedBox(height: 48),
-              if (singlePainWorks)
-                Column(
-                  children: const [
-                    BlockFlutterHlsParser(),
-                    SizedBox(height: 64),
-                    BlockDoubleTapPlayerView(),
-                  ],
-                )
-              else
-                ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    maxWidth: Dimens.MaxWidthWorks,
-                  ),
-                  child: Row(
-                    children: const [
-                      Expanded(
-                        child: BlockFlutterHlsParser(),
-                      ),
-                      SizedBox(width: 64),
-                      Expanded(
-                        child: BlockDoubleTapPlayerView(),
-                      ),
-                    ],
-                  ),
-                ),
+              SectionOss(singlePain: singlePainWorks),
+              const SizedBox(height: 128),
               const SectionArticle(),
             ],
           ),

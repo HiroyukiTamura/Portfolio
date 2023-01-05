@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/model/btn_link.dart';
+import 'package:portfolio/ui/widget/text.dart';
 
 part 'block_oss.g.dart';
 
@@ -28,7 +29,9 @@ Widget _blockFlutterOss(
           mainAxisSize: MainAxisSize.min,
           children: links
               .map((it) => TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // todo impl
+                    },
                     child: Text(it.value),
                   ))
               .toList(),
@@ -37,42 +40,15 @@ Widget _blockFlutterOss(
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              caption,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
+            BodyText1(text: caption),
             const SizedBox(height: 8),
-            Text(
-              'scores',
-              style: Theme.of(context).textTheme.headline6,
-            ),
+            const HeadLine6(text: 'scores'),
             const SizedBox(height: 8),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text(
-                'likes: $likes',
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text(
-                'pub points: $pubPoints',
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text(
-                'popularity: $popularity%',
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-            ),
+            BodyPadded(text: 'likes: $likes'),
+            BodyPadded(text: 'pub points: $pubPoints'),
+            BodyPadded(text: 'popularity: $popularity%'),
             const SizedBox(height: 16),
-            Text(
-              'tech stack',
-              style: Theme.of(context).textTheme.headline6,
-            ),
+            const HeadLine6(text: 'tech stack'),
             const SizedBox(height: 16),
             Wrap(
               spacing: 8,

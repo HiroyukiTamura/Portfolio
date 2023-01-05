@@ -3,6 +3,7 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/model/article.dart';
 import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/resource/theme_colors.dart';
+import 'package:portfolio/ui/widget/text.dart';
 
 part 'section_article.g.dart';
 
@@ -11,11 +12,7 @@ Widget _sectionArticle(BuildContext context) => ConstrainedBox(
       constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthWorks),
       child: Column(
         children: [
-          const SizedBox(height: 128),
-          Text(
-            'articles',
-            style: Theme.of(context).textTheme.headline4,
-          ),
+          const HeadLine4(text: 'articles'),
           const SizedBox(height: 32),
           Wrap(
             spacing: 8,
@@ -31,48 +28,54 @@ Widget __cardItem(
   BuildContext context, {
   required Article article,
 }) =>
-    InkWell(
-      onTap: () {},
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-        decoration: BoxDecoration(
-          color: ThemeColors.kBgGray,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(article.title),
-            SizedBox(height: 8),
-            Row(
-              children: [
-                Icon(
-                  Icons.sell,
-                  color: Theme.of(context).textTheme.bodyText1?.color,
-                  size: 14,
-                ),
-                SizedBox(width: 4),
-                Text(
-                  article.tags.join(', '),
-                  style: Theme.of(context).textTheme.bodyText1,
-                ),
-                SizedBox(width: 8),
-                Icon(
-                  Icons.favorite,
-                  color: Theme.of(context).textTheme.bodyText1?.color,
-                  size: 14,
-                ),
-                SizedBox(width: 4),
-                Text(
-                  article.fav.toString(),
-                  style: Theme.of(context).textTheme.bodyText1,
-                )
-              ],
-            ),
-          ],
+    Container(
+      decoration: BoxDecoration(
+        color: ThemeColors.kBgGray,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: () {
+          // todo impl
+        },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(article.title),
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  const _CaptionIcon(icon: Icons.sell),
+                  const SizedBox(width: 4),
+                  BodyText1(
+                    text: article.tags.join(', '),
+                  ),
+                  const SizedBox(width: 8),
+                  const _CaptionIcon(icon: Icons.favorite),
+                  const SizedBox(width: 4),
+                  BodyText1(
+                    text: article.fav.toString(),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
+    );
+
+@swidget
+Widget __captionIcon(
+  BuildContext context, {
+  required IconData icon,
+}) =>
+    Icon(
+      icon,
+      color: Theme.of(context).textTheme.bodyText1?.color,
+      size: 14,
     );
 
 const _articleList = [

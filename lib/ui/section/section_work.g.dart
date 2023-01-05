@@ -91,3 +91,15 @@ class _DescBlock extends StatelessWidget {
         appStoreUrl: appStoreUrl,
       );
 }
+
+class _Image extends StatelessWidget {
+  const _Image({
+    Key? key,
+    required this.child,
+  }) : super(key: key);
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext _context) => __image(child: child);
+}

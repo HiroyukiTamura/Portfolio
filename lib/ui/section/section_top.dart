@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/resource/strings.dart';
+import 'package:portfolio/ui/widget/text.dart';
 
 part 'section_top.g.dart';
 
@@ -11,14 +12,8 @@ Widget _sectionTop(BuildContext context) => Column(
         'Hiroyuki Tamara',
         style: Theme.of(context).textTheme.headline2,
       ),
-      Text(
-        'mobile app developer',
-        style: Theme.of(context).textTheme.headline4,
-      ),
+      const HeadLine4(text: 'mobile app developer'),
       const SizedBox(height: 64),
-      Text(
-        Strings.headLine,
-        style: Theme.of(context).textTheme.bodyText1,
-      )
+      const BodyText1(text: Strings.headLine)
     ],
   );

@@ -6,16 +6,28 @@ part of 'section_oss.dart';
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class BlockFlutterHlsParser extends StatelessWidget {
-  const BlockFlutterHlsParser({Key? key}) : super(key: key);
+class SectionOss extends StatelessWidget {
+  const SectionOss({
+    Key? key,
+    required this.singlePain,
+  }) : super(key: key);
+
+  final bool singlePain;
 
   @override
-  Widget build(BuildContext _context) => _blockFlutterHlsParser(_context);
+  Widget build(BuildContext _context) => _sectionOss(singlePain: singlePain);
 }
 
-class BlockDoubleTapPlayerView extends StatelessWidget {
-  const BlockDoubleTapPlayerView({Key? key}) : super(key: key);
+class _BlockFlutterHlsParser extends StatelessWidget {
+  const _BlockFlutterHlsParser({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext _context) => _blockDoubleTapPlayerView(_context);
+  Widget build(BuildContext _context) => __blockFlutterHlsParser(_context);
+}
+
+class _BlockDoubleTapPlayerView extends StatelessWidget {
+  const _BlockDoubleTapPlayerView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext _context) => __blockDoubleTapPlayerView(_context);
 }

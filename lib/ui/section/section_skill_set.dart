@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/resource/dimens.dart';
+import 'package:portfolio/ui/widget/text.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 
 part 'section_skill_set.g.dart';
@@ -10,10 +11,7 @@ Widget _sectionSkillSet(BuildContext context) => ConstrainedBox(
       constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthSkill),
       child: Column(
         children: [
-          Text(
-            'skill set',
-            style: Theme.of(context).textTheme.headline4,
-          ),
+          const HeadLine4(text: 'skill set'),
           const SizedBox(height: 32),
           Wrap(
             spacing: 8,

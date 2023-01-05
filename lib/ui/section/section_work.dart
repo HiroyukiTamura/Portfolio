@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/dimens.dart';
+import 'package:portfolio/ui/widget/text.dart';
 
 part 'section_work.g.dart';
 
@@ -40,13 +41,7 @@ Widget _sectionWork(
               appStoreUrl: appStoreUrl,
             ),
             const SizedBox(height: 64),
-            ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthImgInSingle),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(24),
-                child: image,
-              ),
-            )
+            _Image(child: image),
           ] else
             Row(
               children: [
@@ -65,13 +60,7 @@ Widget _sectionWork(
                 Expanded(
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthImg),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(24),
-                        child: image,
-                      ),
-                    ),
+                    child: _Image(child: image),
                   ),
                 )
               ],
@@ -94,10 +83,7 @@ Widget __descBlock(
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          caption,
-          style: Theme.of(context).textTheme.bodyText1,
-        ),
+        BodyText1(text: caption),
         const SizedBox(height: 8),
         Row(
           children: [
@@ -110,30 +96,12 @@ Widget __descBlock(
           ],
         ),
         const SizedBox(height: 8),
-        Text(
-          'usage',
-          style: Theme.of(context).textTheme.headline6,
-        ),
+        const HeadLine6(text: 'usage'),
         const SizedBox(height: 8),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            'total DL: $totalDlNumber',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            'active user: $monthlyUserNumber/month',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
-        ),
+        BodyPadded(text: 'total DL: $totalDlNumber'),
+        BodyPadded(text: 'active user: $monthlyUserNumber/month'),
         const SizedBox(height: 16),
-        Text(
-          'tech stack',
-          style: Theme.of(context).textTheme.headline6,
-        ),
+        const HeadLine6(text: 'tech stack'),
         const SizedBox(height: 16),
         Wrap(
           spacing: 8,
@@ -141,4 +109,16 @@ Widget __descBlock(
           children: techChips,
         ),
       ],
+    );
+
+@swidget
+Widget __image({
+  required Widget child,
+}) =>
+    ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthImg),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(24),
+        child: child,
+      ),
     );

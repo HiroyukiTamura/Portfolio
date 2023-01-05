@@ -27,3 +27,18 @@ class _CardItem extends StatelessWidget {
         article: article,
       );
 }
+
+class _CaptionIcon extends StatelessWidget {
+  const _CaptionIcon({
+    Key? key,
+    required this.icon,
+  }) : super(key: key);
+
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext _context) => __captionIcon(
+        _context,
+        icon: icon,
+      );
+}

@@ -15,7 +15,7 @@ class ThemeColors {
       bodyColor: Colors.white,
     );
     return googleFont.copyWith(
-      bodyLarge: GoogleFonts.robotoTextTheme(theme.textTheme).bodyLarge!.copyWith(
+      bodyLarge: theme.textTheme.bodyLarge!.copyWith(
         fontSize: 16,
         color: Colors.white70,
       ),
