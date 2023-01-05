@@ -8,7 +8,12 @@ import 'package:portfolio/ui/skill_chip.dart';
 part 'section_radio.g.dart';
 
 @swidget
-Widget _sectionRadio(BuildContext context) => SectionWork(
+Widget _sectionRadio(
+  BuildContext context, {
+  required bool singlePain,
+}) =>
+    SectionWork(
+      singlePain: singlePain,
       title: 'ラジカッター',
       caption: Strings.radioCaption,
       totalDlNumber: '3.5M',
@@ -34,5 +39,7 @@ Widget _sectionRadio(BuildContext context) => SectionWork(
         const SkillChipJira(),
         const SkillChipAdmob(),
       ],
-      image: Assets.images.radikoCover.image(height: 280, fit: BoxFit.fill),
+      image: Container(
+        child: Assets.images.radikoCover.image(),
+      ),
     );

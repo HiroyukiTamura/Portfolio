@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/dimens.dart';
-import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/resource/theme_colors.dart';
 import 'package:portfolio/ui/skill_chip.dart';
 
@@ -10,7 +9,7 @@ part 'section_skill_set.g.dart';
 
 @swidget
 Widget _sectionSkillSet(BuildContext context) => ConstrainedBox(
-  constraints: BoxConstraints(maxWidth: Dimens.MaxWidthSkill),
+  constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthSkill),
   child:   Column(
         children: [
           Text(

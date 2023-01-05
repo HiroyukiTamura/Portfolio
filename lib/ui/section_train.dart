@@ -8,14 +8,20 @@ import 'package:portfolio/ui/skill_chip.dart';
 part 'section_train.g.dart';
 
 @swidget
-Widget _sectionTrain(BuildContext context) => SectionWork(
+Widget _sectionTrain(
+  BuildContext context, {
+  required bool singlePain,
+}) =>
+    SectionWork(
+      singlePain: singlePain,
       title: '全国列車位置情報アプリ',
       caption: Strings.trainCaption,
       totalDlNumber: '500k',
       monthlyUserNumber: '5k',
       googlePlayUrl:
           'https://play.google.com/store/apps/details?id=cks.train.train',
-      appStoreUrl: 'https://apps.apple.com/au/app/%E5%85%A8%E5%9B%BD%E5%88%97%E8%BB%8A%E4%BD%8D%E7%BD%AE%E3%82%A2%E3%83%97%E3%83%AA/id1479323990',
+      appStoreUrl:
+          'https://apps.apple.com/au/app/%E5%85%A8%E5%9B%BD%E5%88%97%E8%BB%8A%E4%BD%8D%E7%BD%AE%E3%82%A2%E3%83%97%E3%83%AA/id1479323990',
       techChips: [
         const SkillChipFlutter(),
         SkillChip(
@@ -44,5 +50,5 @@ Widget _sectionTrain(BuildContext context) => SectionWork(
           ),
         )
       ],
-      image: Assets.images.trainCover.image(height: 280, fit: BoxFit.fill),
+      image: Assets.images.trainCover.image(fit: BoxFit.fill),
     );

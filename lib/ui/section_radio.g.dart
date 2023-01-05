@@ -7,8 +7,16 @@ part of 'section_radio.dart';
 // **************************************************************************
 
 class SectionRadio extends StatelessWidget {
-  const SectionRadio({Key? key}) : super(key: key);
+  const SectionRadio({
+    Key? key,
+    required this.singlePain,
+  }) : super(key: key);
+
+  final bool singlePain;
 
   @override
-  Widget build(BuildContext _context) => _sectionRadio(_context);
+  Widget build(BuildContext _context) => _sectionRadio(
+        _context,
+        singlePain: singlePain,
+      );
 }

@@ -8,7 +8,11 @@ import 'package:portfolio/ui/skill_chip.dart';
 part 'section_itsumuso.g.dart';
 
 @swidget
-Widget _sectionItsumuso() => SectionWork(
+Widget _sectionItsumuso({
+  required bool singlePain,
+}) =>
+    SectionWork(
+      singlePain: singlePain,
       title: 'itsumuso',
       caption: Strings.itsumusoCaption,
       totalDlNumber: '10+',

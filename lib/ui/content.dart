@@ -14,52 +14,73 @@ import 'package:portfolio/ui/section_train.dart';
 part 'content.g.dart';
 
 @swidget
-Widget _root(BuildContext context) => Scaffold(
-      backgroundColor: ThemeColors.kBg,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 64),
-        child: Column(
-          children: [
-            const SectionTop(),
-            const SizedBox(height: 16),
-            const SectionDownloaded(),
-            const SizedBox(height: 128),
-            const SectionSkillSet(),
-            const SizedBox(height: 128),
-            Text(
-              'works',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            const SizedBox(height: 16),
-            const SectionRadio(),
-            const SizedBox(height: 128),
-            const SectionTrain(),
-            const SizedBox(height: 128),
-            const SectionItsumuso(),
-            const SizedBox(height: 128),
-            Text(
-              'OSS',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            const SizedBox(height: 48),
-            ConstrainedBox(
-              constraints: const BoxConstraints(
-                maxWidth: Dimens.MaxWidthWorks,
+Widget _root(BuildContext context) =>
+    LayoutBuilder(builder: (context, constraints) {
+      final singlePain = constraints.maxWidth < Dimens.MaxWidthSinglePain;
+      final singlePainWorks =
+          constraints.maxWidth < Dimens.WorksSinglePainThresh;
+      return Scaffold(
+        backgroundColor: ThemeColors.kBg,
+        body: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 64),
+          child: Column(
+            children: [
+              const SectionTop(),
+              const SizedBox(height: 16),
+              const SectionDownloaded(),
+              const SizedBox(height: 128),
+              const SectionSkillSet(),
+              const SizedBox(height: 128),
+              Text(
+                'works',
+                style: Theme.of(context).textTheme.headline4,
               ),
-              child: Row(
-                children: const [
-                  Expanded(
-                    child: BlockFlutterHlsParser(),
-                  ),
-                  SizedBox(width: 64),
-                  Expanded(
-                    child: BlockDoubleTapPlayerView(),
-                  ),
-                ],
+              const SizedBox(height: 16),
+              SectionRadio(
+                singlePain: singlePain,
               ),
-            ),
-            const SectionArticle(),
-          ],
+              const SizedBox(height: 128),
+              SectionTrain(
+                singlePain: singlePain,
+              ),
+              const SizedBox(height: 128),
+              SectionItsumuso(
+                singlePain: singlePain,
+              ),
+              const SizedBox(height: 128),
+              Text(
+                'OSS',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+              const SizedBox(height: 48),
+              if (singlePainWorks)
+                Column(
+                  children: const [
+                    BlockFlutterHlsParser(),
+                    SizedBox(height: 64),
+                    BlockDoubleTapPlayerView(),
+                  ],
+                )
+              else
+                ConstrainedBox(
+                  constraints: const BoxConstraints(
+                    maxWidth: Dimens.MaxWidthWorks,
+                  ),
+                  child: Row(
+                    children: const [
+                      Expanded(
+                        child: BlockFlutterHlsParser(),
+                      ),
+                      SizedBox(width: 64),
+                      Expanded(
+                        child: BlockDoubleTapPlayerView(),
+                      ),
+                    ],
+                  ),
+                ),
+              const SectionArticle(),
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    });

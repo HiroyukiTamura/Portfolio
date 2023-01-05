@@ -7,8 +7,16 @@ part of 'section_train.dart';
 // **************************************************************************
 
 class SectionTrain extends StatelessWidget {
-  const SectionTrain({Key? key}) : super(key: key);
+  const SectionTrain({
+    Key? key,
+    required this.singlePain,
+  }) : super(key: key);
+
+  final bool singlePain;
 
   @override
-  Widget build(BuildContext _context) => _sectionTrain(_context);
+  Widget build(BuildContext _context) => _sectionTrain(
+        _context,
+        singlePain: singlePain,
+      );
 }
