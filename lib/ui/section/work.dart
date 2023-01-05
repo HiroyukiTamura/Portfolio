@@ -19,53 +19,55 @@ Widget _sectionWork(
   String? googlePlayUrl,
   String? appStoreUrl,
 }) =>
-    ConstrainedBox(
-      constraints: const BoxConstraints(
-        maxWidth: Dimens.MaxWidthWorks,
-      ),
-      child: Column(
-        children: [
-          Text(
-            title,
-            style: Theme.of(context).textTheme.headline3,
-          ),
-          const SizedBox(height: 64),
-          if (singlePain) ...[
-            _DescBlock(
-              title: title,
-              caption: caption,
-              totalDlNumber: totalDlNumber,
-              monthlyUserNumber: monthlyUserNumber,
-              techChips: techChips,
-              googlePlayUrl: googlePlayUrl,
-              appStoreUrl: appStoreUrl,
+    Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(
+          maxWidth: Dimens.MaxWidthWorks,
+        ),
+        child: Column(
+          children: [
+            Text(
+              title,
+              style: Theme.of(context).textTheme.headline3,
             ),
             const SizedBox(height: 64),
-            _Image(child: image),
-          ] else
-            Row(
-              children: [
-                Expanded(
-                  child: _DescBlock(
-                    title: title,
-                    caption: caption,
-                    totalDlNumber: totalDlNumber,
-                    monthlyUserNumber: monthlyUserNumber,
-                    techChips: techChips,
-                    googlePlayUrl: googlePlayUrl,
-                    appStoreUrl: appStoreUrl,
+            if (singlePain) ...[
+              _DescBlock(
+                title: title,
+                caption: caption,
+                totalDlNumber: totalDlNumber,
+                monthlyUserNumber: monthlyUserNumber,
+                techChips: techChips,
+                googlePlayUrl: googlePlayUrl,
+                appStoreUrl: appStoreUrl,
+              ),
+              const SizedBox(height: 64),
+              _Image(child: image),
+            ] else
+              Row(
+                children: [
+                  Expanded(
+                    child: _DescBlock(
+                      title: title,
+                      caption: caption,
+                      totalDlNumber: totalDlNumber,
+                      monthlyUserNumber: monthlyUserNumber,
+                      techChips: techChips,
+                      googlePlayUrl: googlePlayUrl,
+                      appStoreUrl: appStoreUrl,
+                    ),
                   ),
-                ),
-                const SizedBox(width: 64),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: _Image(child: image),
-                  ),
-                )
-              ],
-            )
-        ],
+                  const SizedBox(width: 64),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: _Image(child: image),
+                    ),
+                  )
+                ],
+              )
+          ],
+        ),
       ),
     );
 

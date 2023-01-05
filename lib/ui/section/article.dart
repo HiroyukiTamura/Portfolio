@@ -8,18 +8,21 @@ import 'package:portfolio/ui/widget/text.dart';
 part 'article.g.dart';
 
 @swidget
-Widget _sectionArticle(BuildContext context) => ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthWorks),
-      child: Column(
-        children: [
-          const HeadLine4(text: 'articles'),
-          const SizedBox(height: 32),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: _articleList.map((it) => _CardItem(article: it)).toList(),
-          ),
-        ],
+Widget _sectionArticle(BuildContext context) => Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: Dimens.MaxWidthWorks),
+        child: Column(
+          children: [
+            const HeadLine4(text: 'articles'),
+            const SizedBox(height: 32),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children:
+                  _articleList.map((it) => _CardItem(article: it)).toList(),
+            ),
+          ],
+        ),
       ),
     );
 

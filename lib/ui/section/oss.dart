@@ -21,20 +21,22 @@ Widget _sectionOss({
               _BlockDoubleTapPlayerView(),
             ],
           )
-        : ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: Dimens.MaxWidthWorks,
-            ),
-            child: Row(
-              children: const [
-                Expanded(
-                  child: _BlockFlutterHlsParser(),
-                ),
-                SizedBox(width: 64),
-                Expanded(
-                  child: _BlockDoubleTapPlayerView(),
-                ),
-              ],
+        : Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: Dimens.MaxWidthWorks,
+              ),
+              child: Row(
+                children: const [
+                  Expanded(
+                    child: _BlockFlutterHlsParser(),
+                  ),
+                  SizedBox(width: 64),
+                  Expanded(
+                    child: _BlockDoubleTapPlayerView(),
+                  ),
+                ],
+              ),
             ),
           );
 
