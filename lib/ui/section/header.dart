@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
+import 'package:portfolio/util.dart';
 
 part 'header.g.dart';
 
@@ -9,20 +10,21 @@ Widget _sectionHeader(BuildContext context) => ConstrainedBox(
       constraints: const BoxConstraints(minHeight: 64),
       child: Align(
         alignment: Alignment.centerRight,
-        child: Wrap(
-          spacing: 16,
-          runSpacing: 16,
-          crossAxisAlignment: WrapCrossAlignment.end,
+        child: Row(
           children: [
-            _IconBtn(icon: FontAwesomeIcons.github, onPressed: () {
-
-            }),
-            _IconBtn(icon: Icons.facebook, onPressed: () {
-              // https://www.facebook.com/freqmodu874/
-            }),
-            _IconBtn(icon: Icons.email, onPressed: () {
-
-            }),
+            _IconBtn(
+              icon: FontAwesomeIcons.github,
+              onPressed: () async =>
+                  Util.launch('https://github.com/HiroyukiTamura/portfolio'),
+            ),
+            _IconBtn(
+              icon: Icons.facebook,
+              onPressed: () async =>
+                  Util.launch('https://www.facebook.com/freqmodu874/'),
+            ),
+            const Expanded(child: SizedBox.shrink()),
+            Text('hiroyuktamura@gmail.com',
+                style: Theme.of(context).textTheme.bodyText2),
           ],
         ),
       ),
@@ -35,8 +37,8 @@ Widget __iconBtn(
   required void Function() onPressed,
 }) =>
     IconButton(
-      iconSize: 16,
-      color: Theme.of(context).primaryColor,
+      iconSize: 20,
+      color: Colors.white,
       splashRadius: 24,
       onPressed: onPressed,
       icon: Icon(icon),

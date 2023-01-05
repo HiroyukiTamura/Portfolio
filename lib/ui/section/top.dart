@@ -13,7 +13,7 @@ Widget _sectionTop(BuildContext context) => Column(
         style: Theme.of(context).textTheme.headline2,
       ),
       const HeadLine4(text: 'mobile app developer'),
-      const SizedBox(height: 64),
+      const SizedBox(height: 72),
       const BodyText1(text: Strings.headLine)
     ],
   );

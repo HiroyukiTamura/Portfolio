@@ -31,6 +31,7 @@ Widget _root(BuildContext context) =>
           ),
           children: [
             const SectionHeader(),
+            const SizedBox(height: 16),
             const SectionTop(),
             const SizedBox(height: 16),
             const SectionDownloaded(),

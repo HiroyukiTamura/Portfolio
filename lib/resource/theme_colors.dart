@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ThemeColors {
-
   ThemeColors._();
 
   static const kBg = Color(0xff151515);
@@ -10,7 +9,8 @@ class ThemeColors {
   static const kAndroid = Color(0xff3DDC84);
 
   static TextTheme genTextTheme(ThemeData theme) {
-    final googleFont = GoogleFonts.jetBrainsMonoTextTheme(theme.textTheme).apply(
+    final googleFont =
+        GoogleFonts.jetBrainsMonoTextTheme(theme.textTheme).apply(
       displayColor: Colors.white,
       bodyColor: Colors.white,
     );
@@ -18,6 +18,9 @@ class ThemeColors {
       bodyLarge: theme.textTheme.bodyLarge!.copyWith(
         fontSize: 16,
         color: Colors.white70,
+      ),
+      bodyMedium: theme.textTheme.bodyMedium!.copyWith(
+        color: Colors.white54,
       ),
     );
   }
