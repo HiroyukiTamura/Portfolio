@@ -4,7 +4,6 @@ import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/ui/widget/clickable.dart';
 import 'package:portfolio/ui/widget/text.dart';
-import 'package:portfolio/util.dart';
 
 part 'work.g.dart';
 

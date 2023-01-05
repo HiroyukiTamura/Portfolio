@@ -43,7 +43,7 @@ Widget _skillChipJira() => _SkillChip(
       label: 'Jira',
       avatar: Padding(
         padding: const EdgeInsets.all(2),
-        child: Assets.images.jira.svg(),
+        child: Assets.images.jira.image(),
       ),
     );
 
@@ -70,7 +70,7 @@ Widget _skillChipFirebase() => _SkillChip(
       label: 'Firebase',
       avatar: Padding(
         padding: const EdgeInsets.all(2),
-        child: Assets.images.firebase.svg(),
+        child: Assets.images.firebase.image(),
       ),
     );
 
@@ -135,7 +135,7 @@ Widget _skillChipRealm() => _SkillChip(
     label: 'Realm',
     avatar: Padding(
       padding: const EdgeInsets.all(2),
-      child: Assets.images.realm.svg(),
+      child: Assets.images.realm.image(),
     ),
   );
 

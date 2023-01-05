@@ -30,8 +30,8 @@ class $ImagesGen {
   /// File path: images/figma.svg
   SvgGenImage get figma => const SvgGenImage('images/figma.svg');
 
-  /// File path: images/firebase.svg
-  SvgGenImage get firebase => const SvgGenImage('images/firebase.svg');
+  /// File path: images/firebase.png
+  AssetGenImage get firebase => const AssetGenImage('images/firebase.png');
 
   /// File path: images/flutter.svg
   SvgGenImage get flutter => const SvgGenImage('images/flutter.svg');
@@ -51,8 +51,8 @@ class $ImagesGen {
   AssetGenImage get jetpackCompose =>
       const AssetGenImage('images/jetpack_compose.png');
 
-  /// File path: images/jira.svg
-  SvgGenImage get jira => const SvgGenImage('images/jira.svg');
+  /// File path: images/jira.png
+  AssetGenImage get jira => const AssetGenImage('images/jira.png');
 
   /// File path: images/kotlin.svg
   SvgGenImage get kotlin => const SvgGenImage('images/kotlin.svg');
@@ -67,8 +67,8 @@ class $ImagesGen {
   AssetGenImage get radikoCover =>
       const AssetGenImage('images/radiko_cover.png');
 
-  /// File path: images/realm.svg
-  SvgGenImage get realm => const SvgGenImage('images/realm.svg');
+  /// File path: images/realm.png
+  AssetGenImage get realm => const AssetGenImage('images/realm.png');
 
   /// File path: images/riverpod.svg
   SvgGenImage get riverpod => const SvgGenImage('images/riverpod.svg');

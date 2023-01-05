@@ -33,8 +33,8 @@ flutter:
     - images/kotlin.svg
     - images/flutter.svg
     - images/dart.svg
-    - images/firebase.svg
-    - images/jira.svg
+    - images/firebase.png
+    - images/jira.png
     - images/admob.svg
     - images/typescript.svg
     - images/java.svg
@@ -43,7 +43,7 @@ flutter:
     - images/jetpack_compose.png
     - images/riverpod.svg
     - images/algolia.svg
-    - images/realm.svg
+    - images/realm.png
     - images/figma.svg
     - images/node_js.svg
     - images/radiko_cover.png

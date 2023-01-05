@@ -53,7 +53,7 @@ Widget __iconBtn(
       color: Colors.white,
       splashRadius: 24,
       onPressed: onPressed,
-      icon: Icon(icon),
+      icon: Center(child: Icon(icon)),
     );
 
 @swidget

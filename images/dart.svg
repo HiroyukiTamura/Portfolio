@@ -12,7 +12,7 @@
 	<path opacity="0.2" fill="#FFFFFF" d="M52,142c-4-4.02-5-7.97-5-15V47l-1-1v81C46,134.03,46,135.98,52,142l3,3l0,0L52,142z"/>
 	<polygon opacity="0.2" fill="#263238" points="171,82 171,144 144,144 145,145 172,145 172,83 	"/>
 	<path opacity="0.2" fill="#FFFFFF" d="M140,51c-4.96-4.96-9.02-5-15-5H46l1,1h78C127.99,47,135.52,46.5,140,51L140,51z"/>
-	<radialGradient id="SVGID_1_" cx="96" cy="96" r="76" gradientUnits="userSpaceOnUse">
+	<radialGradient id="SVGID_1_" cx="96" cy="96" r="76">
 		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.1"/>
 		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
 	</radialGradient>
