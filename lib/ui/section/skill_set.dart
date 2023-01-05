@@ -4,7 +4,7 @@ import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/ui/widget/text.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 
-part 'section_skill_set.g.dart';
+part 'skill_set.g.dart';
 
 @swidget
 Widget _sectionSkillSet(BuildContext context) => ConstrainedBox(

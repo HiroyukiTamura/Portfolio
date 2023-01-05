@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'section_oss.dart';
+part of 'oss.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
@@ -30,4 +30,43 @@ class _BlockDoubleTapPlayerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext _context) => __blockDoubleTapPlayerView(_context);
+}
+
+class _BlockFlutterOss extends StatelessWidget {
+  const _BlockFlutterOss({
+    Key? key,
+    required this.title,
+    required this.caption,
+    required this.likes,
+    required this.pubPoints,
+    required this.popularity,
+    required this.links,
+    required this.skillChips,
+  }) : super(key: key);
+
+  final String title;
+
+  final String caption;
+
+  final int likes;
+
+  final String pubPoints;
+
+  final int popularity;
+
+  final List<BtnLink> links;
+
+  final List<Widget> skillChips;
+
+  @override
+  Widget build(BuildContext _context) => __blockFlutterOss(
+        _context,
+        title: title,
+        caption: caption,
+        likes: likes,
+        pubPoints: pubPoints,
+        popularity: popularity,
+        links: links,
+        skillChips: skillChips,
+      );
 }

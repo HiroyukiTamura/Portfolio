@@ -5,7 +5,7 @@ import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/resource/theme_colors.dart';
 import 'package:portfolio/ui/widget/text.dart';
 
-part 'section_article.g.dart';
+part 'article.g.dart';
 
 @swidget
 Widget _sectionArticle(BuildContext context) => ConstrainedBox(

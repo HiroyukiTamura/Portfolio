@@ -4,7 +4,7 @@ import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/ui/widget/text.dart';
 
-part 'section_work.g.dart';
+part 'work.g.dart';
 
 @swidget
 Widget _sectionWork(

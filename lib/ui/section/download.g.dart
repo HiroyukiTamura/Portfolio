@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'section_download.dart';
+part of 'download.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator

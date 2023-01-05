@@ -3,7 +3,7 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/ui/widget/text.dart';
 
-part 'section_top.g.dart';
+part 'top.g.dart';
 
 @swidget
 Widget _sectionTop(BuildContext context) => Column(

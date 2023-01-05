@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'section_radio.dart';
+part of 'itsumuso.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class SectionRadio extends StatelessWidget {
-  const SectionRadio({
+class SectionItsumuso extends StatelessWidget {
+  const SectionItsumuso({
     Key? key,
     required this.singlePain,
   }) : super(key: key);
@@ -15,8 +15,6 @@ class SectionRadio extends StatelessWidget {
   final bool singlePain;
 
   @override
-  Widget build(BuildContext _context) => _sectionRadio(
-        _context,
-        singlePain: singlePain,
-      );
+  Widget build(BuildContext _context) =>
+      _sectionItsumuso(singlePain: singlePain);
 }

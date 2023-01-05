@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/strings.dart';
-import 'package:portfolio/ui/section/section_work.dart';
+import 'package:portfolio/ui/section/work.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 
-part 'section_radio.g.dart';
+part 'radio.g.dart';
 
 @swidget
 Widget _sectionRadio(

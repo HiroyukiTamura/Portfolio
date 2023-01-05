@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'section_itsumuso.dart';
+part of 'train.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class SectionItsumuso extends StatelessWidget {
-  const SectionItsumuso({
+class SectionTrain extends StatelessWidget {
+  const SectionTrain({
     Key? key,
     required this.singlePain,
   }) : super(key: key);
@@ -15,6 +15,8 @@ class SectionItsumuso extends StatelessWidget {
   final bool singlePain;
 
   @override
-  Widget build(BuildContext _context) =>
-      _sectionItsumuso(singlePain: singlePain);
+  Widget build(BuildContext _context) => _sectionTrain(
+        _context,
+        singlePain: singlePain,
+      );
 }

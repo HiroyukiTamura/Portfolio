@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'section_skill_set.dart';
+part of 'top.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class SectionSkillSet extends StatelessWidget {
-  const SectionSkillSet({Key? key}) : super(key: key);
+class SectionTop extends StatelessWidget {
+  const SectionTop({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext _context) => _sectionSkillSet(_context);
+  Widget build(BuildContext _context) => _sectionTop(_context);
 }

@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'section_train.dart';
+part of 'radio.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class SectionTrain extends StatelessWidget {
-  const SectionTrain({
+class SectionRadio extends StatelessWidget {
+  const SectionRadio({
     Key? key,
     required this.singlePain,
   }) : super(key: key);
@@ -15,7 +15,7 @@ class SectionTrain extends StatelessWidget {
   final bool singlePain;
 
   @override
-  Widget build(BuildContext _context) => _sectionTrain(
+  Widget build(BuildContext _context) => _sectionRadio(
         _context,
         singlePain: singlePain,
       );
