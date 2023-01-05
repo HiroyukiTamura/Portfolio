@@ -60,6 +60,9 @@ class $ImagesGen {
   /// File path: images/node_js.svg
   SvgGenImage get nodeJs => const SvgGenImage('images/node_js.svg');
 
+  /// File path: images/qiita.png
+  AssetGenImage get qiita => const AssetGenImage('images/qiita.png');
+
   /// File path: images/radiko_cover.png
   AssetGenImage get radikoCover =>
       const AssetGenImage('images/radiko_cover.png');
@@ -92,6 +95,7 @@ class $ImagesGen {
         jira,
         kotlin,
         nodeJs,
+        qiita,
         radikoCover,
         realm,
         riverpod,

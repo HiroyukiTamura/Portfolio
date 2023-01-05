@@ -49,6 +49,7 @@ flutter:
     - images/radiko_cover.png
     - images/train_cover.png
     - images/itsumuso_cover.webp
+    - images/qiita.png
 
 flutter_gen:
   integrations:

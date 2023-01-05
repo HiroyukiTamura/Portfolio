@@ -6,6 +6,7 @@ import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 import 'package:portfolio/ui/widget/text.dart';
+import 'package:portfolio/util.dart';
 
 part 'oss.g.dart';
 
@@ -104,9 +105,7 @@ Widget __blockFlutterOss(
           mainAxisSize: MainAxisSize.min,
           children: links
               .map((it) => TextButton(
-                    onPressed: () {
-                      // todo impl
-                    },
+                    onPressed: () async => Util.launch(it.url),
                     child: Text(it.value),
                   ))
               .toList(),

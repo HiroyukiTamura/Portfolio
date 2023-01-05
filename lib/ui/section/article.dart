@@ -4,6 +4,7 @@ import 'package:portfolio/model/article.dart';
 import 'package:portfolio/resource/dimens.dart';
 import 'package:portfolio/resource/theme_colors.dart';
 import 'package:portfolio/ui/widget/text.dart';
+import 'package:portfolio/util.dart';
 
 part 'article.g.dart';
 
@@ -15,12 +16,12 @@ Widget _sectionArticle(BuildContext context) => Center(
           children: [
             const HeadLine4(text: 'articles'),
             const SizedBox(height: 32),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children:
-                  _articleList.map((it) => _CardItem(article: it)).toList(),
-            ),
+            ..._articleList.map((it) => _CardItem(article: it)).toList(),
+            const SizedBox(height: 8),
+            TextButton(
+              onPressed: () async => Util.launch(Util.URL_QIITA),
+              child: const Text('more'),
+            )
           ],
         ),
       ),
@@ -31,40 +32,41 @@ Widget __cardItem(
   BuildContext context, {
   required Article article,
 }) =>
-    Container(
-      decoration: BoxDecoration(
-        color: ThemeColors.kBgGray,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: () {
-          // todo impl
-        },
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(article.title),
-              const SizedBox(height: 8),
-              Row(
-                children: [
-                  const _CaptionIcon(icon: Icons.sell),
-                  const SizedBox(width: 4),
-                  BodyText1(
-                    text: article.tags.join(', '),
-                  ),
-                  const SizedBox(width: 8),
-                  const _CaptionIcon(icon: Icons.favorite),
-                  const SizedBox(width: 4),
-                  BodyText1(
-                    text: article.fav.toString(),
-                  )
-                ],
-              ),
-            ],
+    Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Container(
+        decoration: BoxDecoration(
+          color: ThemeColors.kBgGray,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () async => Util.launch(article.link),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 36),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(article.title),
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    const _CaptionIcon(icon: Icons.sell),
+                    const SizedBox(width: 4),
+                    BodyText1(
+                      text: article.tags.join(', '),
+                    ),
+                    const SizedBox(width: 8),
+                    const _CaptionIcon(icon: Icons.favorite),
+                    const SizedBox(width: 4),
+                    BodyText1(
+                      text: article.fav.toString(),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -88,5 +90,17 @@ const _articleList = [
     tags: ['Dart', 'Flutter', 'Riverpod', 'freezed'],
     fav: 7,
     link: 'https://qiita.com/HiroyukiTamura/items/db5c862d4df6279b4681',
+  ),
+  Article(
+    title: 'RiverpodはStateNotifierのLocatorMixinをサポートしていない',
+    tags: ['Dart', 'Flutter', 'Riverpod', 'provider', 'StateNotifier'],
+    fav: 12,
+    link: 'https://qiita.com/HiroyukiTamura/items/828bff799bdfed1ceacd',
+  ),
+  Article(
+    title: '[Android]インストラメント化テストとローカルテストでコードを共有するには',
+    tags: ['Android', 'Kotlin', 'JUnit', 'gradle'],
+    fav: 1,
+    link: 'https://qiita.com/HiroyukiTamura/items/88ef8832955617edcdd1',
   )
 ];

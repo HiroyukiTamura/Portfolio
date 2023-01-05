@@ -17,10 +17,13 @@ class _IconBtn extends StatelessWidget {
   const _IconBtn({
     Key? key,
     required this.icon,
+    required this.iconSize,
     required this.onPressed,
   }) : super(key: key);
 
   final IconData icon;
+
+  final double iconSize;
 
   final void Function() onPressed;
 
@@ -28,6 +31,26 @@ class _IconBtn extends StatelessWidget {
   Widget build(BuildContext _context) => __iconBtn(
         _context,
         icon: icon,
+        iconSize: iconSize,
+        onPressed: onPressed,
+      );
+}
+
+class _WidgetBtn extends StatelessWidget {
+  const _WidgetBtn({
+    Key? key,
+    required this.child,
+    required this.onPressed,
+  }) : super(key: key);
+
+  final Widget child;
+
+  final void Function() onPressed;
+
+  @override
+  Widget build(BuildContext _context) => __widgetBtn(
+        _context,
+        child: child,
         onPressed: onPressed,
       );
 }

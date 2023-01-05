@@ -7,4 +7,6 @@ class Util {
     final value = Uri.parse(url);
     if (await canLaunchUrl(value)) await launchUrl(value);
   }
+
+  static const URL_QIITA = 'https://qiita.com/HiroyukiTamura';
 }

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
 import 'package:portfolio/resource/dimens.dart';
+import 'package:portfolio/ui/widget/clickable.dart';
 import 'package:portfolio/ui/widget/text.dart';
+import 'package:portfolio/util.dart';
 
 part 'work.g.dart';
 
@@ -90,11 +92,21 @@ Widget __descBlock(
         Row(
           children: [
             if (googlePlayUrl != null)
-              Assets.images.googlePlayBadge.image(height: 64),
+              Clickable(
+                url: googlePlayUrl,
+                child: Assets.images.googlePlayBadge.image(
+                  height: 64,
+                ),
+              ),
             if (googlePlayUrl != null && appStoreUrl != null)
               const SizedBox(width: 8),
             if (appStoreUrl != null)
-              Assets.images.appStoreBadge.svg(height: 44),
+              Clickable(
+                url: appStoreUrl,
+                child: Assets.images.appStoreBadge.svg(
+                  height: 44,
+                ),
+              ),
           ],
         ),
         const SizedBox(height: 8),
