@@ -16,8 +16,8 @@ Widget _sectionRadio(
       singlePain: singlePain,
       title: 'ラジカッター',
       caption: Strings.radioCaption,
-      totalDlNumber: '3.5M',
-      monthlyUserNumber: '11k',
+      totalDlNumber: '400,000+',
+      monthlyUserNumber: '15,000+',
       googlePlayUrl:
           'https://play.google.com/store/apps/details?id=com.cks.hiroyuki2.radiko',
       techChips: const [

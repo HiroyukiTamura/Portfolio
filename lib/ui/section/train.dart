@@ -16,8 +16,8 @@ Widget _sectionTrain(
       singlePain: singlePain,
       title: '全国列車位置情報アプリ',
       caption: Strings.trainCaption,
-      totalDlNumber: '500k',
-      monthlyUserNumber: '5k',
+      totalDlNumber: '50,000+',
+      monthlyUserNumber: '5,000+',
       googlePlayUrl:
           'https://play.google.com/store/apps/details?id=cks.train.train',
       appStoreUrl:
