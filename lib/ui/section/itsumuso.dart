@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
-import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/ui/section/work.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 
 part 'itsumuso.g.dart';
 
 @swidget
-Widget _sectionItsumuso({
+Widget _sectionItsumuso(BuildContext context, {
   required bool singlePain,
 }) =>
     SectionWork(
       singlePain: singlePain,
       title: 'itsumuso',
-      caption: Strings.itsumusoCaption,
+      caption: AppLocalizations.of(context)!.itsumusoCaption,
       totalDlNumber: '10+',
       monthlyUserNumber: '0+',
       techChips: const [

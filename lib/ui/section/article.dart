@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/model/article.dart';
+import 'package:portfolio/resource/app_theme.dart';
 import 'package:portfolio/resource/dimens.dart';
-import 'package:portfolio/resource/theme_colors.dart';
 import 'package:portfolio/ui/widget/text.dart';
 import 'package:portfolio/util.dart';
 
@@ -36,7 +36,7 @@ Widget __cardItem(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Container(
         decoration: BoxDecoration(
-          color: ThemeColors.kBgGray,
+          color: AppTheme.kBgGray,
           borderRadius: BorderRadius.circular(16),
         ),
         child: InkWell(

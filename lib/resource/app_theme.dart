@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ThemeColors {
-  ThemeColors._();
+class AppTheme {
+  AppTheme._();
 
   static const kBg = Color(0xff151515);
   static final kBgGray = Colors.white.withAlpha(10);

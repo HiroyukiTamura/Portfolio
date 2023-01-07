@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  intl: ^0.17.0
   functional_widget_annotation: ^0.10.0
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.6
@@ -29,6 +30,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - images/kotlin.svg
     - images/flutter.svg

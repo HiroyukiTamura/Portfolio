@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
+import 'package:portfolio/resource/app_theme.dart';
 import 'package:portfolio/resource/dimens.dart';
-import 'package:portfolio/resource/theme_colors.dart';
 import 'package:portfolio/ui/section/article.dart';
 import 'package:portfolio/ui/section/download.dart';
 import 'package:portfolio/ui/section/header.dart';
@@ -22,7 +22,7 @@ Widget _root(BuildContext context) =>
       final singlePainWorks =
           constraints.maxWidth < Dimens.WorksSinglePainThresh;
       return Scaffold(
-        backgroundColor: ThemeColors.kBg,
+        backgroundColor: AppTheme.kBg,
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 64),
           children: [

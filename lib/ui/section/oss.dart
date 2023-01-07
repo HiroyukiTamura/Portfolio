@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/model/btn_link.dart';
 import 'package:portfolio/resource/dimens.dart';
-import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 import 'package:portfolio/ui/widget/text.dart';
 import 'package:portfolio/util.dart';
@@ -42,10 +42,10 @@ Widget _sectionOss({
           );
 
 @swidget
-Widget __blockFlutterHlsParser(BuildContext context) => const _BlockFlutterOss(
+Widget __blockFlutterHlsParser(BuildContext context) => _BlockFlutterOss(
       title: 'Flutter Hls Parser',
-      caption: Strings.flutterHlsParserCaption,
-      links: [
+      caption: AppLocalizations.of(context)!.flutterHlsParserCaption,
+      links: const [
         BtnLink(
           url: 'https://pub.dev/packages/flutter_hls_parser',
           value: 'pub.dev',
@@ -58,15 +58,15 @@ Widget __blockFlutterHlsParser(BuildContext context) => const _BlockFlutterOss(
       pubPoints: '130/140',
       likes: 20,
       popularity: 86,
-      skillChips: [SkillChipDart()],
+      skillChips: const [SkillChipDart()],
     );
 
 @swidget
 Widget __blockDoubleTapPlayerView(BuildContext context) =>
-    const _BlockFlutterOss(
+    _BlockFlutterOss(
       title: 'Double Tap Player View',
-      caption: Strings.doubleTapPlayerViewCaption,
-      links: [
+      caption: AppLocalizations.of(context)!.doubleTapPlayerViewCaption,
+      links: const [
         BtnLink(
           url: 'https://pub.dev/packages/double_tap_player_view',
           value: 'pub.dev',
@@ -79,7 +79,7 @@ Widget __blockDoubleTapPlayerView(BuildContext context) =>
       pubPoints: '120/140',
       likes: 33,
       popularity: 74,
-      skillChips: [SkillChipFlutter()],
+      skillChips: const [SkillChipFlutter()],
     );
 
 @swidget

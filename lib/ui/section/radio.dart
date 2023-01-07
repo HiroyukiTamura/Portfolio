@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
-import 'package:portfolio/resource/strings.dart';
 import 'package:portfolio/ui/section/work.dart';
 import 'package:portfolio/ui/widget/skill_chip.dart';
 
@@ -15,7 +15,7 @@ Widget _sectionRadio(
     SectionWork(
       singlePain: singlePain,
       title: 'ラジカッター',
-      caption: Strings.radioCaption,
+      caption: AppLocalizations.of(context)!.radioCaption,
       totalDlNumber: '400,000+',
       monthlyUserNumber: '15,000+',
       googlePlayUrl:
