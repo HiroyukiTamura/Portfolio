@@ -16,6 +16,7 @@ Widget _sectionOss({
 }) =>
     singlePain
         ? Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               _BlockFlutterHlsParser(),
               SizedBox(height: 64),
@@ -28,6 +29,7 @@ Widget _sectionOss({
                 maxWidth: Dimens.MaxWidthWorks,
               ),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Expanded(
                     child: _BlockFlutterHlsParser(),
@@ -62,8 +64,7 @@ Widget __blockFlutterHlsParser(BuildContext context) => _BlockFlutterOss(
     );
 
 @swidget
-Widget __blockDoubleTapPlayerView(BuildContext context) =>
-    _BlockFlutterOss(
+Widget __blockDoubleTapPlayerView(BuildContext context) => _BlockFlutterOss(
       title: 'Double Tap Player View',
       caption: AppLocalizations.of(context)!.doubleTapPlayerViewCaption,
       links: const [

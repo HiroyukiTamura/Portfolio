@@ -29,7 +29,7 @@ Widget _root(BuildContext context) =>
             const SectionHeader(),
             const SizedBox(height: 16),
             const SectionTop(),
-            const SizedBox(height: 16),
+            const SizedBox(height: 32),
             const SectionDownloaded(),
             const SizedBox(height: 128),
             const SectionSkillSet(),

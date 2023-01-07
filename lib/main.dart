@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Hiroyuki Tamura',
         theme: ThemeData(
-          textTheme: AppTheme.genTextTheme(Theme.of(context)),
+          textTheme: context.genTextTheme(),
           primarySwatch: Colors.orange,
         ),
         home: const Root(),
