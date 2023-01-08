@@ -29,10 +29,10 @@ Widget _sectionSkillSet(BuildContext context) => Center(
                 SkillChipJira(),
                 SkillChipAdmob(),
                 SkillChipLang(
-                  label: 'native level Japanese',
+                  label: 'TOEIC 730',
                 ),
                 SkillChipLang(
-                  label: 'B1 level English',
+                  label: 'native level Japanese',
                 ),
               ],
             ),

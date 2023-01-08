@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:portfolio/gen/assets.gen.dart';
-import 'package:portfolio/resource/theme_colors.dart';
+import 'package:portfolio/resource/app_theme.dart';
 
 part 'skill_chip.g.dart';
 
@@ -112,7 +112,7 @@ Widget _skillChipLang({
 Widget _skillChipAndroid() => const _SkillChipIcon(
       label: 'Android',
       icon: Icons.android,
-      iconColor: ThemeColors.kAndroid,
+      iconColor: AppTheme.kAndroid,
     );
 
 @swidget

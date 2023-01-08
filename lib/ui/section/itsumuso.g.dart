@@ -15,6 +15,8 @@ class SectionItsumuso extends StatelessWidget {
   final bool singlePain;
 
   @override
-  Widget build(BuildContext _context) =>
-      _sectionItsumuso(singlePain: singlePain);
+  Widget build(BuildContext _context) => _sectionItsumuso(
+        _context,
+        singlePain: singlePain,
+      );
 }
