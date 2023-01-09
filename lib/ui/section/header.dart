@@ -37,20 +37,26 @@ Widget _sectionHeader(BuildContext context) => ConstrainedBox(
               ),
             ),
             const Expanded(child: SizedBox.shrink()),
-            TextButton(
-              onPressed: () async {
-                await Clipboard.setData(const ClipboardData(
-                  text: _kEmail,
-                ));
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text(
-                    'Email address copied to clipboard',
-                    textAlign: TextAlign.center,
-                  ),
-                ));
-              },
-              child: Text('hiroyuktamura@gmail.com',
-                  style: Theme.of(context).textTheme.bodyText2),
+            Flexible(
+              child: TextButton(
+                onPressed: () async {
+                  await Clipboard.setData(const ClipboardData(
+                    text: _kEmail,
+                  ));
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    content: Text(
+                      'Email address copied to clipboard',
+                      textAlign: TextAlign.center,
+                    ),
+                  ));
+                },
+                child: Text(
+                  'hiroyuktamura@gmail.com',
+                  style: Theme.of(context).textTheme.bodyText2,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
+              ),
             ),
           ],
         ),

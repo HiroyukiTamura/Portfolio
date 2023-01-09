@@ -25,10 +25,11 @@ Widget _root(BuildContext context) =>
         final singlePain = constraints.maxWidth < Dimens.MaxWidthSinglePain;
         final singlePainWorks =
             constraints.maxWidth < Dimens.WorksSinglePainThresh;
+        final horizontalPad = singlePain ? 24.0 : 64.0;
         return Scaffold(
           backgroundColor: AppTheme.kBg,
           body: ListView(
-            padding: const EdgeInsets.symmetric(horizontal: 64),
+            padding: EdgeInsets.symmetric(horizontal: horizontalPad),
             children: [
               const SectionHeader(),
               const SizedBox(height: 16),
