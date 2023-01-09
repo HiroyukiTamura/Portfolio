@@ -35,6 +35,7 @@ Widget __cardItem(
     Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Container(
+        width: double.infinity,
         decoration: BoxDecoration(
           color: AppTheme.kBgGray,
           borderRadius: BorderRadius.circular(16),
