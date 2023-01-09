@@ -17,48 +17,54 @@ part 'content.g.dart';
 
 @swidget
 Widget _root(BuildContext context) =>
-    LayoutBuilder(builder: (context, constraints) {
-      final singlePain = constraints.maxWidth < Dimens.MaxWidthSinglePain;
-      final singlePainWorks =
-          constraints.maxWidth < Dimens.WorksSinglePainThresh;
-      return Scaffold(
-        backgroundColor: AppTheme.kBg,
-        body: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 64),
-          children: [
-            const SectionHeader(),
-            const SizedBox(height: 16),
-            const SectionTop(),
-            const SizedBox(height: 32),
-            const SectionDownloaded(),
-            const SizedBox(height: 128),
-            const SectionSkillSet(),
-            const SizedBox(height: 128),
-            const Center(
-              child: HeadLine4(text: 'works'),
-            ),
-            const SizedBox(height: 16),
-            SectionRadio(
-              singlePain: singlePain,
-            ),
-            const SizedBox(height: 128),
-            SectionTrain(
-              singlePain: singlePain,
-            ),
-            const SizedBox(height: 128),
-            SectionItsumuso(
-              singlePain: singlePain,
-            ),
-            const SizedBox(height: 128),
-            const Center(
-              child: HeadLine4(text: 'OSS'),
-            ),
-            const SizedBox(height: 48),
-            SectionOss(singlePain: singlePainWorks),
-            const SizedBox(height: 128),
-            const SectionArticle(),
-            const SizedBox(height: 128),
-          ],
-        ),
-      );
-    });
+    Theme(
+      data: Theme.of(context).copyWith(
+        textTheme: context.genTextTheme(),
+      ),
+      child: LayoutBuilder(builder: (context, constraints) {
+        final singlePain = constraints.maxWidth < Dimens.MaxWidthSinglePain;
+        final singlePainWorks =
+            constraints.maxWidth < Dimens.WorksSinglePainThresh;
+        final horizontalPad = singlePain ? 24.0 : 64.0;
+        return Scaffold(
+          backgroundColor: AppTheme.kBg,
+          body: ListView(
+            padding: EdgeInsets.symmetric(horizontal: horizontalPad),
+            children: [
+              const SectionHeader(),
+              const SizedBox(height: 16),
+              const SectionTop(),
+              const SizedBox(height: 32),
+              const SectionDownloaded(),
+              const SizedBox(height: 128),
+              const SectionSkillSet(),
+              const SizedBox(height: 128),
+              const Center(
+                child: HeadLine4(text: 'works'),
+              ),
+              const SizedBox(height: 16),
+              SectionRadio(
+                singlePain: singlePain,
+              ),
+              const SizedBox(height: 128),
+              SectionTrain(
+                singlePain: singlePain,
+              ),
+              const SizedBox(height: 128),
+              SectionItsumuso(
+                singlePain: singlePain,
+              ),
+              const SizedBox(height: 128),
+              const Center(
+                child: HeadLine4(text: 'OSS'),
+              ),
+              const SizedBox(height: 48),
+              SectionOss(singlePain: singlePainWorks),
+              const SizedBox(height: 128),
+              const SectionArticle(),
+              const SizedBox(height: 128),
+            ],
+          ),
+        );
+      }),
+    );

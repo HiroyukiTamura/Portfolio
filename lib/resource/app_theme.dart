@@ -13,10 +13,8 @@ class AppTheme {
 extension BuildContextX on BuildContext {
   TextTheme genTextTheme() {
     final textTheme = Theme.of(this).textTheme;
-    final locales = window.locales;
-    final japaneseIndex = locales.indexWhere((it) => it.languageCode.split('_').contains('ja'));
-    final englishIndex = locales.indexWhere((it) => it.languageCode.split('_').contains('en'));
-    final japanese = japaneseIndex != -1 && japaneseIndex < englishIndex;
+    final languageCode = Localizations.localeOf(this).languageCode;
+    final japanese = languageCode.toLowerCase() == 'ja';
 
     final googleFont = GoogleFonts.jetBrainsMonoTextTheme(textTheme).apply(
       displayColor: Colors.white,

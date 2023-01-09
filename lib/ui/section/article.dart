@@ -50,21 +50,33 @@ Widget __cardItem(
               children: [
                 Text(article.title),
                 const SizedBox(height: 8),
-                Row(
-                  children: [
-                    const _CaptionIcon(icon: Icons.sell),
-                    const SizedBox(width: 4),
-                    BodyText1(
-                      text: article.tags.join(', '),
-                    ),
-                    const SizedBox(width: 8),
-                    const _CaptionIcon(icon: Icons.favorite),
-                    const SizedBox(width: 4),
-                    BodyText1(
-                      text: article.fav.toString(),
-                    )
-                  ],
-                ),
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      const WidgetSpan(
+                        alignment: PlaceholderAlignment.middle,
+                        child: _CaptionIcon(icon: Icons.sell),
+                      ),
+                      const WidgetSpan(
+                        child: SizedBox(width: 4),
+                      ),
+                      TextSpan(
+                        style: Theme.of(context).textTheme.bodyText1,
+                        text: article.tags.join(', '),
+                      ),
+                      const WidgetSpan(child: SizedBox(width: 8)),
+                      const WidgetSpan(
+                        alignment: PlaceholderAlignment.middle,
+                        child: _CaptionIcon(icon: Icons.favorite),
+                      ),
+                      const WidgetSpan(child: SizedBox(width: 4)),
+                      TextSpan(
+                        style: Theme.of(context).textTheme.bodyText1,
+                        text: article.fav.toString(),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),

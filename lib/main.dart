@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:portfolio/resource/app_theme.dart';
 import 'package:portfolio/ui/content.dart';
 
 void main() {
@@ -15,7 +14,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Hiroyuki Tamura',
         theme: ThemeData(
-          textTheme: context.genTextTheme(),
           primarySwatch: Colors.orange,
         ),
         home: const Root(),

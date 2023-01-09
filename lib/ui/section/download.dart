@@ -4,14 +4,15 @@ import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 part 'download.g.dart';
 
 @swidget
-Widget _sectionDownloaded(BuildContext context) => Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+Widget _sectionDownloaded(BuildContext context) => Wrap(
+      runSpacing: 24,
+      spacing: 64,
+      alignment: WrapAlignment.center,
       children: const [
         _Item(
           text: '450,000+',
           caption: 'total downloaded',
         ),
-        SizedBox(width: 64),
         _Item(
           text: '20,000+',
           caption: 'active user/month',
