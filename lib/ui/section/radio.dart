@@ -17,7 +17,7 @@ Widget _sectionRadio(
       title: 'ラジカッター',
       caption: AppLocalizations.of(context)!.radioCaption,
       totalDlNumber: '400,000+',
-      monthlyUserNumber: '15,000+',
+      monthlyUserNumber: '47,000+',
       googlePlayUrl:
           'https://play.google.com/store/apps/details?id=com.cks.hiroyuki2.radiko',
       techChips: const [

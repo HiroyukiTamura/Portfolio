@@ -14,7 +14,7 @@ Widget _sectionDownloaded(BuildContext context) => Wrap(
           caption: 'total downloaded',
         ),
         _Item(
-          text: '20,000+',
+          text: '74,000+',
           caption: 'active user/month',
         ),
       ],
