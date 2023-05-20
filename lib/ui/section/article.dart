@@ -62,7 +62,7 @@ Widget __cardItem(
                         child: SizedBox(width: 4),
                       ),
                       TextSpan(
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                         text: article.tags.join(', '),
                       ),
                       const WidgetSpan(child: SizedBox(width: 8)),
@@ -72,7 +72,7 @@ Widget __cardItem(
                       ),
                       const WidgetSpan(child: SizedBox(width: 4)),
                       TextSpan(
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                         text: article.fav.toString(),
                       ),
                     ],
@@ -92,7 +92,7 @@ Widget __captionIcon(
 }) =>
     Icon(
       icon,
-      color: Theme.of(context).textTheme.bodyText1?.color,
+      color: Theme.of(context).textTheme.bodyLarge?.color,
       size: 14,
     );
 

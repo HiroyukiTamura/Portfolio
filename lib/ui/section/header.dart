@@ -53,7 +53,7 @@ Widget _sectionHeader(BuildContext context) => ConstrainedBox(
                   },
                   child: Text(
                     'hiroyuktamura@gmail.com',
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyMedium,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     softWrap: false,
