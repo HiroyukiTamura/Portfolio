@@ -20,7 +20,7 @@ Widget _headLine6(
 }) =>
     Text(
       text,
-      style: Theme.of(context).textTheme.headline6,
+      style: Theme.of(context).textTheme.titleLarge,
     );
 
 @swidget
@@ -30,7 +30,7 @@ Widget _bodyText1(
 }) =>
     Text(
       text,
-      style: Theme.of(context).textTheme.bodyText1,
+      style: Theme.of(context).textTheme.bodyLarge,
     );
 
 @swidget
@@ -40,5 +40,5 @@ Widget _headLine4(
 }) =>
     Text(
       text,
-      style: Theme.of(context).textTheme.headline4,
+      style: Theme.of(context).textTheme.headlineMedium,
     );

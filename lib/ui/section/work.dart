@@ -29,7 +29,7 @@ Widget _sectionWork(
           children: [
             Text(
               title,
-              style: Theme.of(context).textTheme.headline3,
+              style: Theme.of(context).textTheme.displaySmall,
             ),
             const SizedBox(height: 64),
             if (singlePain) ...[

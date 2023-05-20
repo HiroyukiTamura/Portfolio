@@ -32,7 +32,7 @@ Widget __item(
           text,
           style: Theme.of(context)
               .textTheme
-              .headline4
+              .headlineMedium
               ?.copyWith(color: Colors.orange),
         ),
         Text(caption),

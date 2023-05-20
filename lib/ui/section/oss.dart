@@ -100,7 +100,7 @@ Widget __blockFlutterOss(
           title,
           style:
               GoogleFonts.notoSansJavaneseTextTheme(Theme.of(context).textTheme)
-                  .headline5,
+                  .headlineSmall,
         ),
         Row(
           mainAxisSize: MainAxisSize.min,

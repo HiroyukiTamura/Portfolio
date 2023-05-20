@@ -10,7 +10,7 @@ Widget _sectionTop(BuildContext context) => Column(
       children: [
         Text(
           'Hiroyuki Tamara',
-          style: Theme.of(context).textTheme.headline2,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         const HeadLine4(text: 'mobile app developer'),
         const SizedBox(height: 72),
