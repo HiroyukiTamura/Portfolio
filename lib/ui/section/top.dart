@@ -9,7 +9,7 @@ part 'top.g.dart';
 Widget _sectionTop(BuildContext context) => Column(
       children: [
         Text(
-          'Hiroyuki Tamara',
+          'Hiroyuki Tamura',
           style: Theme.of(context).textTheme.displayMedium,
         ),
         const HeadLine4(text: 'mobile app developer'),
