@@ -12,14 +12,16 @@ part of 'btn_link.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$BtnLink {
   String get url => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BtnLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BtnLinkCopyWith<BtnLink> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -41,6 +43,8 @@ class _$BtnLinkCopyWithImpl<$Res, $Val extends BtnLink>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BtnLink
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -61,29 +65,32 @@ class _$BtnLinkCopyWithImpl<$Res, $Val extends BtnLink>
 }
 
 /// @nodoc
-abstract class _$$_BtnLinkCopyWith<$Res> implements $BtnLinkCopyWith<$Res> {
-  factory _$$_BtnLinkCopyWith(
-          _$_BtnLink value, $Res Function(_$_BtnLink) then) =
-      __$$_BtnLinkCopyWithImpl<$Res>;
+abstract class _$$BtnLinkImplCopyWith<$Res> implements $BtnLinkCopyWith<$Res> {
+  factory _$$BtnLinkImplCopyWith(
+          _$BtnLinkImpl value, $Res Function(_$BtnLinkImpl) then) =
+      __$$BtnLinkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String url, String value});
 }
 
 /// @nodoc
-class __$$_BtnLinkCopyWithImpl<$Res>
-    extends _$BtnLinkCopyWithImpl<$Res, _$_BtnLink>
-    implements _$$_BtnLinkCopyWith<$Res> {
-  __$$_BtnLinkCopyWithImpl(_$_BtnLink _value, $Res Function(_$_BtnLink) _then)
+class __$$BtnLinkImplCopyWithImpl<$Res>
+    extends _$BtnLinkCopyWithImpl<$Res, _$BtnLinkImpl>
+    implements _$$BtnLinkImplCopyWith<$Res> {
+  __$$BtnLinkImplCopyWithImpl(
+      _$BtnLinkImpl _value, $Res Function(_$BtnLinkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BtnLink
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? url = null,
     Object? value = null,
   }) {
-    return _then(_$_BtnLink(
+    return _then(_$BtnLinkImpl(
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -98,8 +105,8 @@ class __$$_BtnLinkCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_BtnLink implements _BtnLink {
-  const _$_BtnLink({required this.url, required this.value});
+class _$BtnLinkImpl implements _BtnLink {
+  const _$BtnLinkImpl({required this.url, required this.value});
 
   @override
   final String url;
@@ -112,10 +119,10 @@ class _$_BtnLink implements _BtnLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BtnLink &&
+            other is _$BtnLinkImpl &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.value, value) || other.value == value));
   }
@@ -123,23 +130,28 @@ class _$_BtnLink implements _BtnLink {
   @override
   int get hashCode => Object.hash(runtimeType, url, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BtnLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BtnLinkCopyWith<_$_BtnLink> get copyWith =>
-      __$$_BtnLinkCopyWithImpl<_$_BtnLink>(this, _$identity);
+  _$$BtnLinkImplCopyWith<_$BtnLinkImpl> get copyWith =>
+      __$$BtnLinkImplCopyWithImpl<_$BtnLinkImpl>(this, _$identity);
 }
 
 abstract class _BtnLink implements BtnLink {
   const factory _BtnLink(
-      {required final String url, required final String value}) = _$_BtnLink;
+      {required final String url, required final String value}) = _$BtnLinkImpl;
 
   @override
   String get url;
   @override
   String get value;
+
+  /// Create a copy of BtnLink
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_BtnLinkCopyWith<_$_BtnLink> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$BtnLinkImplCopyWith<_$BtnLinkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

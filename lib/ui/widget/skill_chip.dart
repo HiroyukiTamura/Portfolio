@@ -88,7 +88,7 @@ Widget _skillChipFlutter() => _SkillChip(
       label: 'Flutter',
       avatar: Padding(
         padding: const EdgeInsets.symmetric(vertical: 2),
-        child: Assets.images.flutter.svg(),
+        child: FlutterLogo(),
       ),
     );
 
