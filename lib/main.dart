@@ -13,11 +13,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'Hiroyuki Tamura',
-        theme: ThemeData(
-          primarySwatch: Colors.orange,
-        ),
+        theme: _theme,
         home: const Root(),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
       );
+
+  ThemeData get _theme {
+    final themeData = ThemeData(
+      primarySwatch: Colors.orange,
+    );
+    return themeData.copyWith(
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: Colors.orange,
+        ),
+      ),
+    );
+  }
 }

@@ -33,7 +33,6 @@ flutter:
   generate: true
   assets:
     - images/kotlin.svg
-    - images/flutter.svg
     - images/dart.svg
     - images/firebase.png
     - images/jira.png

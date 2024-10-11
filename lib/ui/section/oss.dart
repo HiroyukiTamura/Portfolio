@@ -98,9 +98,7 @@ Widget __blockFlutterOss(
       children: [
         Text(
           title,
-          style:
-              GoogleFonts.notoSansJavaneseTextTheme(Theme.of(context).textTheme)
-                  .headlineSmall,
+          style: GoogleFonts.notoSansJavaneseTextTheme(Theme.of(context).textTheme).headlineSmall,
         ),
         Row(
           mainAxisSize: MainAxisSize.min,
